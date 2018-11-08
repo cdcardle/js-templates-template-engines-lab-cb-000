@@ -6,6 +6,12 @@ function createPost() {
   let body = document.getElementById("postBody").value;
   let author = document.getElementById("postAuthor").value;
 
+  document.getElementsByTagName("main")[0].innerHTML += pageTemplate();
+
+  let post = postTemplate({'title': title, 'body': body, 'poster': author});
+  let postElement = document.getElementById("post");
+  postElement.innerHTML = post;
+  postElement.getElementsByTagName("footer")[0].innerHTML = commentsTemplate();
 }
 
 function postComment() {
