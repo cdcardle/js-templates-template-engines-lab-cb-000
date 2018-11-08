@@ -8,7 +8,7 @@ function createPost() {
 
   document.getElementsByTagName("main")[0].innerHTML += pageTemplate();
 
-  let post = postTemplate({'title': title, 'body': body, 'poster': author});
+  let post = postTemplate({'title': title, 'body': body, 'author': author});
   let postElement = document.getElementById("post");
   postElement.innerHTML = post;
   postElement.getElementsByTagName("footer")[0].innerHTML = commentsTemplate();
